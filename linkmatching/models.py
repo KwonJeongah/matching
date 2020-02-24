@@ -5,6 +5,7 @@ class Coords(models.Model):
     lat = models.FloatField(default = -1)
     lon = models.FloatField(default = -1)
 
+'''
 class ResultLink(models.Model):
     link_id = models.CharField(max_length=13)
     up_from_no = models.CharField(max_length=6)
@@ -49,3 +50,4 @@ class ResultLink(models.Model):
     tl_density = models.FloatField(default = -1)
     up_its_id = models.CharField(max_length = 10)
     down_its_id = models.CharField(max_length = 10)
+'''

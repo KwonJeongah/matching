@@ -30,13 +30,10 @@ app_name = 'linkmatching'
 router = routers.DefaultRouter()
 router.register('coords', linkmatching.api.CoordsViewSet)
 
-router2 = routers.DefaultRouter()
-router2.register('resultlink', linkmatching.api.ResultLinkViewSet)
 
 urlpatterns = [
    url(r'^admin/', admin.site.urls),
    url(r'^api/doc', get_swagger_view(title='Rest API Document')),
    url(r'^api/v1/', include((router.urls, 'coords'), namespace = 'coords')),
-   url(r'^api/v1/', include((router2.urls, 'resultlink'), namespace = 'resultlink')),
    path('link_matching/', link_matching, name='link_matching')
 ]
