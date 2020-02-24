@@ -23,7 +23,7 @@ matching/settings.py의 ALLOWED_HOSTS에서 추가
 ## url접근
 - admin: http://192.168.0.143:8000/admin/
 - coords: http://192.168.0.143:8000/api/v1/coords/
-- road_info: http://192.168.0.143:8000/link_mathing/
+- road_info: http://192.168.0.143:8000/link_matching/
 
 ## road_info
 - 좌표값 위치의 도로 정보를 json형태로 보여줌
