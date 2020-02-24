@@ -6,11 +6,11 @@
 
 ## 개발 환경
 - Ubuntu 18.04
-- django
-- djangorestframework
-- django-rest-swagger
-- networkx 
-- geopandas
+- django 3.0.3
+- rest_framework 3.11.0
+- rest_framework_swagger 2.2.0
+- networkx 2.4
+- geopandas 0.6.2
 
 ## allowed_hosts
 matching/settings.py의 ALLOWED_HOSTS에서 추가
