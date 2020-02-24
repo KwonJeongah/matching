@@ -1,8 +1,6 @@
 from django.shortcuts import render
 import networkx as nx
 import geopandas as gpd
-import pandas as pd
-import requests, json
 from shapely.geometry import Point
 from django.http import JsonResponse
 from .models import Coords
