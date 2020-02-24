@@ -1,5 +1,8 @@
 import networkx as nx
 import geopandas as gpd
+import pandas as pd
+import requests, json
+from shapely.geometry import Point
 
 '''
 #특정 지역의 shp파일 생성
@@ -9,7 +12,11 @@ yongin_link = link[link['FIRST_GU'].isin(['31191','31192','31193'])]
 yongin_link.to_file("yongin_link_KTDB.shp")
 '''
 
-point = (37.278127, 127.115921)
+point_url = 'http://192.168.0.143:8000/api/v1/point/'
+point = requests.get(point_url).json()
+point = pd.DataFrame(point)
+point = (point.lat, point.lon)
+#point = (37.278127, 127.115921)
 
 link = gpd.read_file('yongin_link_KTDB.shp')
 
@@ -28,3 +35,5 @@ closest_edge_to_point = edges_with_distances[0][0]
 geometry, u, v = closest_edge_to_point
 
 result = link[(link['UP_FROM_NO'] == u) & (link['UP_TO_NODE'] == v)]
+
+print(result)
