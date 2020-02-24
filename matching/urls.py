@@ -23,10 +23,12 @@ from rest_framework_swagger.views import get_swagger_view
 
 import linkmatching.api
 
+from linkmatching.views import link_matching
+
 app_name = 'linkmatching'
 
 router = routers.DefaultRouter()
-router.register('point', linkmatching.api.PointViewSet)
+router.register('coords', linkmatching.api.CoordsViewSet)
 
 router2 = routers.DefaultRouter()
 router2.register('resultlink', linkmatching.api.ResultLinkViewSet)
@@ -34,6 +36,7 @@ router2.register('resultlink', linkmatching.api.ResultLinkViewSet)
 urlpatterns = [
    url(r'^admin/', admin.site.urls),
    url(r'^api/doc', get_swagger_view(title='Rest API Document')),
-   url(r'^api/v1/', include((router.urls, 'point'), namespace = 'point')),
-   url(r'^api/v1/', include((router2.urls, 'resultlink'), namespace = 'resultlink'))
+   url(r'^api/v1/', include((router.urls, 'coords'), namespace = 'coords')),
+   url(r'^api/v1/', include((router2.urls, 'resultlink'), namespace = 'resultlink')),
+   path('link_matching/', link_matching, name='link_matching')
 ]

@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class Point(models.Model):
+class Coords(models.Model):
     lat = models.FloatField(default = -1)
     lon = models.FloatField(default = -1)
 
