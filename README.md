@@ -15,11 +15,11 @@
 ## 빌드 및 실행하기    
 ### 터미널 환경    
    * git, python, Django는 설치되어 있다고 가정
-   
+    ```  
   $ git clone https://github.com/dsalice/matching.git
   $ python manage.py
-  
-### allowed_hosts
+   ```  
+### allowed_hosts    
 matching/settings.py의 ALLOWED_HOSTS에서 추가
 
 ## url
