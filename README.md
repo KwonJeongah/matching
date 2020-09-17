@@ -15,22 +15,24 @@
 ## 빌드 및 실행하기    
 ### 터미널 환경    
    * git, python, Django는 설치되어 있다고 가정
-    ```  
+```  
   $ git clone https://github.com/dsalice/matching.git
   $ python manage.py
-   ```  
+```  
+
+
 ### allowed_hosts    
 matching/settings.py의 ALLOWED_HOSTS에서 추가
 
-## url
+### url
 - admin: http://localhost:8000/admin/
 - coords: http://localhost:8000/api/v1/coords/
 - road_info: http://localhost:8000/link_matching/
 
-## road_info
+### road_info
 - 좌표값 위치의 도로 정보를 json형태로 보여줌
 - 좌표값은 coords의 id: 1인 것을 기준으로 함
 
-## 출력 결과
+### 출력 결과
 
 ![도로정보결과](https://user-images.githubusercontent.com/37493709/93419927-fc774f00-f8e8-11ea-8a00-66b160f4df48.png)
