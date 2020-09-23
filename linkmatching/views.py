@@ -29,7 +29,7 @@ def link_matching(requests):
         for graph_edge in graph_edges
     ]
 
-    edges_with_dstances = sorted(edges_with_distances, key=lambda x: x[1])
+    edges_with_distances = sorted(edges_with_distances, key=lambda x: x[1])
     closest_edge_to_point = edges_with_distances[0][0]
     geometry, u, v = closest_edge_to_point
 
